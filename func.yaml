@@ -7,6 +7,9 @@ imageDigest: sha256:53cd4ab25bec9e75fa1cc2d8ce39242724e18aa01c14cb6a45b535a6599a
 created: 2023-06-14T15:24:21.651116+02:00
 invoke: cloudevent
 build:
+  git:
+    url: https://github.com/zroubalik/responder
+    revision: main
   builder: pack
 deploy:
   namespace: demo

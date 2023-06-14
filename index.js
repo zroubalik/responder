@@ -53,6 +53,14 @@ const handle = async (context, event) => {
         throw error;
       }
       break;
+    case 'scooters':
+      try {
+        await sendDataToAPI(`${backendApiUri}/scooters`, event.data);
+      } catch (error) {
+        context.log.error(error);
+        throw error;
+      }
+      break;
     default:
       console.log(`Unknown event type: ${event.type}`);
   }
